@@ -1,0 +1,33 @@
+.header {
+    display: flex;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+.header-navigation {
+    display: flex;
+    flex-direction: row;
+    margin-right: 2em;
+}
+
+.header-nav-opts {
+    padding: 2em;
+}
+
+@media(max-width: 900px) {
+    .header {
+        flex-direction: column;
+        height: fit-content;
+    }
+    .header-navigation {
+        flex-direction: column;
+    }
+    .header-brand {
+        display: none;
+    }
+}
+
