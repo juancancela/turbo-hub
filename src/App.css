@@ -1,3 +1,7 @@
 .app-container {
   display: grid;
 };
+
+.page {
+  padding-top: 200px;
+}

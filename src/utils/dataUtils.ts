@@ -10,7 +10,7 @@ export const getConfig = (): TurboHubConfig => {
 
     const { items } = data.header;
     const menuItems = items.map(item => {
-        const menuItem = new MenuItem(item.type, item.value, item.styles, item.items);
+        const menuItem = new MenuItem(item.type, item.value, item.href, item.styles, item.items);
         return menuItem;
     });
     const header = new Header(menuItems, logo, data.header.styles);

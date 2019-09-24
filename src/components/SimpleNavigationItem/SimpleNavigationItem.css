@@ -3,4 +3,9 @@
     margin-left: 2em;
     margin-right: 2em;
     cursor: pointer;
+    text-decoration: none;
 }
+
+.nav-item-selected {
+    text-decoration: underline;
+};

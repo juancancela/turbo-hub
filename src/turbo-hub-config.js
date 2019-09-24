@@ -5,7 +5,8 @@ export default {
     header: {
         items: [{
             type: SimpleNavigationItem,
-            value: 'item 1',
+            value: 'Contacto',
+            href: '/contact',
             styles: {
                 color: 'white'
             }
@@ -13,6 +14,7 @@ export default {
         {
             type: SimpleNavigationItem,
             value: 'item 2',
+            href: '/contact1',
             styles: {
                 color: 'white'
             }
@@ -20,6 +22,7 @@ export default {
         {
             type: SimpleNavigationItem,
             value: 'item 3',
+            href: '/contact2',
             styles: {
                 color: 'white'
             }
@@ -27,6 +30,7 @@ export default {
         {
             type: DropdownNavigationItem,
             value: 'item 4',
+            href: '/contact3',
             styles: {
                 width: '100px',
                 color: 'white'
@@ -35,12 +39,14 @@ export default {
                 {
                     type: SimpleNavigationItem,
                     value: 'item 11',
+                    href: '/contact4',
                     items: null,
                     styles: {}
                 },
                 {
                     type: SimpleNavigationItem,
                     value: 'item 12',
+                    href: '/contact5',
                     items: null,
                     styles: {}
                 }

@@ -1,11 +1,17 @@
 .header {
     display: flex;
-    height: 50px;
     position: fixed;
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
     padding: 2em;
+    transition: padding 0.2s ease;
+    opacity: 0.5;
+}
+
+.header:hover {
+    opacity: 1;
+    transition: opacity 0.2s;
 }
 
 .header-navigation {
@@ -17,6 +23,27 @@
 .header-nav-opts {
     padding: 2em;
 }
+
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .rotating {
+    animation: rotating 8s linear infinite;
+  }
 
 @media(max-width: 900px) {
     .header {

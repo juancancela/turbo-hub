@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 const AppContext = React.createContext([{}, () => { }]);
 
-
-
-const AppProvider = (props: any) => {
-    const [state, setState] = useState({});
+const AppProvider = props => {
+    const [state, setState] = useState({ selectedNavigationItem: null, currentPage: null });
     return (
         <AppContext.Provider value={[state, setState]}>
             {props.children}
