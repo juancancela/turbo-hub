@@ -1,3 +1,5 @@
+$primaryColor: black;
+
 .header {
     display: flex;
     position: fixed;
@@ -6,18 +8,19 @@
     justify-content: space-between;
     padding: 2em;
     transition: padding 0.2s ease;
-    opacity: 0.5;
+    opacity: 0.9;
+    background-color: $primaryColor;
+
+    .navigation {
+      display: flex;
+      flex-direction: row;
+      margin-right: 2em;
+    }
 }
 
 .header:hover {
     opacity: 1;
     transition: opacity 0.2s;
-}
-
-.header-navigation {
-    display: flex;
-    flex-direction: row;
-    margin-right: 2em;
 }
 
 .header-nav-opts {

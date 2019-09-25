@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import './Header.css';
+import './Header.scss';
 import SimpleNavigationItem from '../SimpleNavigationItem/SimpleNavigationItem';
 import { AppContext } from '../../AppContext';
 import MenuItemType from '../../data/MenuItemType';
@@ -43,7 +43,7 @@ export default function Header() {
                     alt={logoText}
                     style={styles} />
             </div>
-            <div className="header-navigation">
+            <div className="navigation">
                 {
                     items
                 }

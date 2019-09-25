@@ -61,7 +61,6 @@ export default {
         },
         styles: {
             'fontWeight': 'bold',
-            'backgroundColor': 'black',
             'boxShadow': '3px 3px 5px 2px #ccc'
         }
     }

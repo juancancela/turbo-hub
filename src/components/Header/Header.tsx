@@ -30,7 +30,7 @@ export default function Header() {
                     alt={logoText}
                     style={styles} />
             </div>
-            <div className="header-navigation">
+            <div className="header navigation">
                 {
                     isMobile() ? items : <div>{items}</div>
                 }
