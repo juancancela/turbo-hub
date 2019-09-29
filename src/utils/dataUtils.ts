@@ -3,6 +3,7 @@ import Logo from "../data/Logo";
 import Header from "../data/Header";
 import data from '../turbo-hub-config';
 import MenuItem from "../data/MenuItem";
+import Route from "../data/Route";
 
 export const getConfig = (): TurboHubConfig => {
     const { logoUrl, logoText } = data.header.logo;
@@ -14,8 +15,16 @@ export const getConfig = (): TurboHubConfig => {
         return menuItem;
     });
     const header = new Header(menuItems, logo, data.header.styles);
+
+    const {routesData} = data;
+    const routes = [];
+
+    routesData.map(data => {
+        let route = new Route(data.route, data.rootComponent);
+        routes.push(route);
+    });
     
-    return new TurboHubConfig(header);
+    return new TurboHubConfig(header, routes);
 };
 
 export const isMobile = () => /Mobi/.test(navigator.userAgent);

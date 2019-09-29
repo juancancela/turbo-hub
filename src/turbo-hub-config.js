@@ -2,6 +2,20 @@ import MenuItemType from './data/MenuItemType';
 const {SimpleNavigationItem, DropdownNavigationItem} = MenuItemType;
 
 export default {
+    routes: [
+        {
+            route: '/',
+            rootComponent: 'App'
+        },
+        {
+            route: '/contact',
+            rootComponent: 'ContactPage'
+        },
+        {
+            route: '/test23',
+            rootComponent: 'ContactPage'
+        }
+    ],
     header: {
         items: [{
             type: SimpleNavigationItem,

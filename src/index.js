@@ -6,10 +6,15 @@ import App from './App';
 import ContactPage from './ContactPage';
 import * as serviceWorker from './serviceWorker';
 import { AppProvider } from './AppContext';
+const getConfig = require('./utils/dataUtils').getConfig;
+const config = getConfig();
+
+console.log(JSON.stringify(config));
 
 const routing = (
   <AppProvider>
     <Router>
+
       <div>
         <Route path="/" component={App} />
         <Route path="/contact" component={ContactPage} />
