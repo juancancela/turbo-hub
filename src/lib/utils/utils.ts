@@ -1,7 +1,7 @@
 import TurboHubConfig from "../data/TurboHubConfigModel";
 import Logo from "../data/Logo";
 import Header from "../data/Header";
-import data from '../turbo-hub-config';
+import data from '../../turbo-hub-config';
 import MenuItem from "../data/MenuItem";
 import Route from "../data/Route";
 
@@ -16,7 +16,7 @@ export const getConfig = (): TurboHubConfig => {
     });
     const header = new Header(menuItems, logo, data.header.styles);
 
-    const {routesData} = data;
+    const routesData = data.routes;
     const routes = [];
 
     routesData.map(data => {

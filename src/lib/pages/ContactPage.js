@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import axios from 'axios';
 import './ContactPage.css';
-import { AppContext } from './AppContext';
+import { AppContext } from '../context/AppContext';
 
 export default function ContactPage() {
     const [state, setState] = useContext(AppContext);

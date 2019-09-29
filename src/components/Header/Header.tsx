@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import './Header.css';
-import SimpleNavigationItem from '../SimpleNavigationItem/SimpleNavigationItem';
-import { AppContext } from '../../AppContext';
-import MenuItemType from '../../data/MenuItemType';
-import DropdownNavigationItem from '../DropdownNavigationItem/DropdownNavigationItem';
-import { getConfig, isMobile } from '../../utils/dataUtils';
+import SimpleNavigationItem from '../../lib/components/SimpleNavigationItem/SimpleNavigationItem';
+import { AppContext } from '../../lib/context/AppContext';
+import MenuItemType from '../../lib/data/MenuItemType';
+import DropdownNavigationItem from '../../lib/components/DropdownNavigationItem/DropdownNavigationItem';
+import { getConfig, isMobile } from '../../lib/utils/utils';
 const config = getConfig();
 
 export default function Header() {

@@ -1,4 +1,4 @@
-import MenuItemType from './data/MenuItemType';
+import MenuItemType from './lib/data/MenuItemType';
 const {SimpleNavigationItem, DropdownNavigationItem} = MenuItemType;
 
 export default {

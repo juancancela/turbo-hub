@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { AppContext } from '../../AppContext';
+import { AppContext } from '../../context/AppContext';
 import './SimpleNavigationItem.css';
 
 export default function SimpleNavigationItem({ item }) {

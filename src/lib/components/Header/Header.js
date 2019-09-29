@@ -1,13 +1,14 @@
-import React, { useContext, useEffect } from 'react';
-import './Header.scss';
-import SimpleNavigationItem from '../SimpleNavigationItem/SimpleNavigationItem';
+import React, { useContext } from 'react';
+import './Header.css';
+import SimpleNavigationItem from '../../components/SimpleNavigationItem/SimpleNavigationItem';
 import { AppContext } from '../../AppContext';
 import MenuItemType from '../../data/MenuItemType';
-import DropdownNavigationItem from '../DropdownNavigationItem/DropdownNavigationItem';
-import { getConfig, isMobile } from '../../utils/dataUtils';
+import { getConfig } from '../../utils/utils';
 const config = getConfig();
 const logo = require(`../../assets/${config.header.logo.logoUrl}`);
+
 window.onscroll = function() {scrollFunction()};
+
 function scrollFunction() {
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
       document.getElementById("header").style.paddingTop = '0.5em';
