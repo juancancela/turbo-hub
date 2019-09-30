@@ -14,12 +14,20 @@
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",
     "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "assets/*": ["src/lib/assets/*"],
+      "models/*": ["src/lib/models/*"],
+      "context/*": ["src/lib/context/*"],
+      "pages/*": ["src/lib/pages/*"],
+      "utils/*": ["src/lib/utils/*"]
+    },
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react"
   },
   "include": [
-    "src"
+    "src/**/*"
   ]
 }

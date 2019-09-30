@@ -1,0 +1,19 @@
+{
+    "metadata": {
+        "title":"Test Application Title"
+    },
+    "pages": [
+        {
+            "mainComponent":{
+                "name": "ContactPage"
+            },
+            "path": "/"
+        },
+        {
+            "mainComponent":{
+                "name": "ContactPage"
+            },
+            "path": "/hola"
+        }
+    ]
+}

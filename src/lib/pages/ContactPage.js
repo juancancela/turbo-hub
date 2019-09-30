@@ -11,8 +11,7 @@ export default function ContactPage() {
         axios.get(`https://jsonplaceholder.typicode.com/users`)
             .then(res => {
                 const users = res.data;
-                console.log('USERS => ', users);
-                setState(state => ({ ...state, users: res.data }));
+                setState(state => ({ ...state, users }));
             });
     }, []);
     

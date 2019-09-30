@@ -1,5 +1,5 @@
-import StyleProperty from './StyleProperty';
-import ComponentProperty from './ComponentProperty';
+import StyleProperty from 'models/StyleProperty';
+import ComponentProperty from 'models/ComponentProperty';
 
 export default class Component {
     constructor(private name: string, private properties: Array<ComponentProperty>, private styles?: Array<StyleProperty>) {

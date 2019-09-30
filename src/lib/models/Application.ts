@@ -1,15 +1,15 @@
-import Metadata from './Metadata';
-import Section from './Section';
-import StyleProperty from './StyleProperty';
-import ScriptResource from './ScriptResource';
+import Metadata from 'models/Metadata';
+import ScriptResource from 'models/ScriptResource';
+import ApplicationPage from 'models/ApplicationPage';
+import StyleProperty from 'models/StyleProperty';
 
 export default class Application {
     constructor(private metadata: Metadata,
-        private sections: Array<Section>,
+        private pages: Array<ApplicationPage>,
         private styles?: Array<StyleProperty>,
         private scripts?: Array<ScriptResource>) {
         this.metadata = metadata;
-        this.sections = sections;
+        this.pages = pages;
         this.styles = styles;
         this.scripts = scripts;
     }
@@ -18,8 +18,8 @@ export default class Application {
         return this.metadata;
     }
 
-    getSections(): Array<Section> {
-        return this.sections;
+    getPages(): Array<ApplicationPage> {
+        return this.pages;
     }
 
     getStyles(): Array<StyleProperty> {

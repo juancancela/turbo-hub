@@ -1,7 +1,7 @@
-import Component from './Component';
-import StyleProperty from './StyleProperty';
+import Component from 'models/Component';
+import StyleProperty from 'models/StyleProperty';
 
-export default class Section {
+export default class ApplicationPage {
     private id: string;
     constructor(private mainComponent: Component, private path: string, private styles?: Array<StyleProperty>) {
         this.id = this.path;
