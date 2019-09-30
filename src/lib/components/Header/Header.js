@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import './Header.css';
-import SimpleNavigationItem from '../../components/SimpleNavigationItem/SimpleNavigationItem';
-import { AppContext } from '../../AppContext';
-import MenuItemType from '../../data/MenuItemType';
-import { getConfig } from '../../utils/utils';
+import SimpleNavigationItem from 'components/SimpleNavigationItem/SimpleNavigationItem';
+import { AppContext } from 'context/AppContext';
+import MenuItemType from 'model/MenuItemType';
+import { getConfig } from 'utils/utils';
 const config = getConfig();
-const logo = require(`../../assets/${config.header.logo.logoUrl}`);
+const logo = require(`assets/${config.header.logo.logoUrl}`);
 
 window.onscroll = function() {scrollFunction()};
 
