@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import './Header.css';
 import SimpleNavigationItem from 'components/SimpleNavigationItem/SimpleNavigationItem';
 import { AppContext } from 'context/AppContext';
-import MenuItemType from 'model/MenuItemType';
+import MenuItemType from 'src/lib/models/MenuItemType';
 import { getConfig } from 'utils/utils';
 const config = getConfig();
 const logo = require(`assets/${config.header.logo.logoUrl}`);
