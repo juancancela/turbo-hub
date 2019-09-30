@@ -1,7 +1,7 @@
-import Metadata from 'models/Metadata';
-import ScriptResource from 'models/ScriptResource';
-import ApplicationPage from 'models/ApplicationPage';
-import StyleProperty from 'models/StyleProperty';
+import Metadata from './Metadata';
+import ScriptResource from './ScriptResource';
+import ApplicationPage from './ApplicationPage';
+import StyleProperty from './StyleProperty';
 
 export default class Application {
     constructor(private metadata: Metadata,

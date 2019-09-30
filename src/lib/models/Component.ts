@@ -1,8 +1,7 @@
-import StyleProperty from 'models/StyleProperty';
-import ComponentProperty from 'models/ComponentProperty';
+import StyleProperty from './StyleProperty';
 
 export default class Component {
-    constructor(private name: string, private properties: Array<ComponentProperty>, private styles?: Array<StyleProperty>) {
+    constructor(private name: string, private properties: Map<string, any>, private styles?: Array<StyleProperty>) {
         this.name = name;
         this.properties = properties;
         this.styles = styles;
@@ -16,7 +15,7 @@ export default class Component {
         return this.styles;
     }
 
-    getProperties(): Array<ComponentProperty> {
+    getProperties(): Map<string, any> {
         return this.properties;
     }
 };

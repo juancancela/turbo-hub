@@ -14,13 +14,13 @@
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
-      "assets/*": ["src/lib/assets/*"],
-      "models/*": ["src/lib/models/*"],
-      "context/*": ["src/lib/context/*"],
-      "pages/*": ["src/lib/pages/*"],
-      "utils/*": ["src/lib/utils/*"]
+      "assets/*": ["lib/assets/*"],
+      "models/*": ["lib/models/*"],
+      "context/*": ["lib/context/*"],
+      "pages/*": ["lib/pages/*"],
+      "utils/*": ["lib/utils/*"]
     },
     "resolveJsonModule": true,
     "isolatedModules": true,

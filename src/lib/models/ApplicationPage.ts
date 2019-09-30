@@ -1,5 +1,5 @@
-import Component from 'models/Component';
-import StyleProperty from 'models/StyleProperty';
+import Component from './Component';
+import StyleProperty from './StyleProperty';
 
 export default class ApplicationPage {
     private id: string;
