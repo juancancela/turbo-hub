@@ -5,7 +5,7 @@ import StyleProperty from './StyleProperty';
 
 export default class Application {
     constructor(private metadata: Metadata,
-        private pages: Array<ApplicationPage>,
+        private pages: Map<string, ApplicationPage>,
         private styles?: Array<StyleProperty>,
         private scripts?: Array<ScriptResource>) {
         this.metadata = metadata;
@@ -18,7 +18,7 @@ export default class Application {
         return this.metadata;
     }
 
-    getPages(): Array<ApplicationPage> {
+    getPages(): Map<string, ApplicationPage> {
         return this.pages;
     }
 

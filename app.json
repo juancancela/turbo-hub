@@ -1,19 +1,70 @@
 {
     "metadata": {
-        "title":"Test Application Title"
+        "title": "Test Application Title"
     },
-    "pages": [
-        {
-            "mainComponent":{
-                "name": "ContactPage"
-            },
-            "path": "/"
+    "pages": {
+        "/": {
+            "mainComponent": {
+                "name": "MainPage",
+                "properties": {
+                    "items": [
+                        {
+                            "type": "SimpleNavigationItem",
+                            "value": "Contacto",
+                            "href": "/contact",
+                            "styles": {
+                                "color": "white"
+                            }
+                        },
+                        {
+                            "type": "SimpleNavigationItem",
+                            "value": "item 2",
+                            "href": "/contact1",
+                            "styles": {
+                                "color": "white"
+                            }
+                        },
+                        {
+                            "type": "SimpleNavigationItem",
+                            "value": "item 3",
+                            "href": "/contact2",
+                            "styles": {
+                                "color": "white"
+                            }
+                        },
+                        {
+                            "type": "DropdownNavigationItem",
+                            "value": "item 4",
+                            "href": "/contact3",
+                            "styles": {
+                                "width": "100px",
+                                "color": "white"
+                            },
+                            "items": [
+                                {
+                                    "type": "SimpleNavigationItem",
+                                    "value": "item 11",
+                                    "href": "/contact4",
+                                    "items": null,
+                                    "styles": {}
+                                },
+                                {
+                                    "type": "SimpleNavigationItem",
+                                    "value": "item 12",
+                                    "href": "/contact5",
+                                    "items": null,
+                                    "styles": {}
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
         },
-        {
-            "mainComponent":{
+        "/contact": {
+            "mainComponent": {
                 "name": "ContactPage"
-            },
-            "path": "/hola"
+            }
         }
-    ]
+    }
 }

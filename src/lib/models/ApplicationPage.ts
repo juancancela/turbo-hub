@@ -2,20 +2,9 @@ import Component from './Component';
 import StyleProperty from './StyleProperty';
 
 export default class ApplicationPage {
-    private id: string;
-    constructor(private mainComponent: Component, private path: string, private styles?: Array<StyleProperty>) {
-        this.id = this.path;
-        this.path = path;
+    constructor(private mainComponent: Component, private styles?: Array<StyleProperty>) {
         this.mainComponent = mainComponent;
         this.styles = styles;
-    }
-
-    getId(): string {
-        return this.id;
-    }
-
-    getPath(): string {
-        return this.path;
     }
 
     getMainComponent(): Component {

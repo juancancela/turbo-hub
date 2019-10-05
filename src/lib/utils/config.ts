@@ -4,21 +4,34 @@ import Application from '../models/Application';
 import ApplicationPage from '../models/ApplicationPage';
 import Component from '../models/Component';
 
+const serializeComponentProperties = properties => {
+    const mainComponentProperties = new Map<string, any>();
+    if (!properties) return mainComponentProperties;
+    Object.keys(properties).forEach(propertyKey => {
+        const value = properties[propertyKey];
+        mainComponentProperties.set(propertyKey, value);
+    });
+    return mainComponentProperties;
+};
+
 export const serialize = (): Application => {
     /* serialize metadata data */
     const metadata = new Metadata(appConfig.metadata.title);
 
     /* serialize app pages data */
-    const pages = [];
-    appConfig.pages.forEach(page => {
-        const mainComponentProperties = new Map<string, any>();
-        mainComponentProperties.set('items', [1,2,3]);
-        console.log('lalalalalaalalalalaala');
-        console.log(JSON.stringify(mainComponentProperties));
-        const mainComponent = new Component(page.mainComponent.name, mainComponentProperties);
-        pages.push(new ApplicationPage(mainComponent, page.path));
+    const pages = new Map<string, ApplicationPage>();
+    Object.keys(appConfig.pages).forEach(url => {
+        const page = appConfig.pages[url];
+        const mainComponent = new Component(page.mainComponent.name, serializeComponentProperties(page.mainComponent.properties));
+        const applicationPage = new ApplicationPage(mainComponent);
+        pages.set(url, applicationPage);
     });
     const application = new Application(metadata, pages);
-    debugger;
     return application;
+};
+
+export const config = serialize();
+
+export const getPageData = url => {
+    return config.getPages().get(url);
 };
