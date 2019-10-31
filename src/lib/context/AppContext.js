@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { serialize } from '../utils/config';
-const app = serialize();
+import { serializeApplication } from '../utils/config';
+const app = serializeApplication();
 const AppContext = React.createContext([{}, () => { }]);
 
 const AppProvider = props => {

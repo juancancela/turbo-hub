@@ -1,0 +1,39 @@
+{
+    "metadata": {
+        "title": "Test Application Title"
+    },
+    "pages": {
+        "/": {
+            "layouts": {
+                "desktop": {
+                    "grid": [
+                        ["TestComponentA:default", "TestComponentA:default", "TestComponentB:default", "TestComponentB:default"],
+                        ["TestComponentB:default", "TestComponentA:default"],
+                        ["TestComponentC:default", "TestComponentC:default", "TestComponentC:default"]
+                    ]
+                },
+                "mobile": {
+                    "grid": [
+                        ["TestComponentA:default"],
+                        ["TestComponentB:default"],
+                        ["TestComponentC:default"]
+                    ]
+                }
+            },
+            "styles": null
+        }
+    },
+    "styles": null,
+    "scripts": null,
+    "components": {
+        "TestComponentA": {
+            "name": "ComponentA",
+            "instances": {
+                "default": {
+                    
+                }
+            },
+            "styles": null
+        }
+    }
+}

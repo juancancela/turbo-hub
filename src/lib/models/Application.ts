@@ -1,11 +1,11 @@
 import Metadata from './Metadata';
 import ScriptResource from './ScriptResource';
-import ApplicationPage from './ApplicationPage';
+import Page from './Page';
 import StyleProperty from './StyleProperty';
 
 export default class Application {
     constructor(private metadata: Metadata,
-        private pages: Map<string, ApplicationPage>,
+        private pages: Map<string, Page>,
         private styles?: Array<StyleProperty>,
         private scripts?: Array<ScriptResource>) {
         this.metadata = metadata;
@@ -18,7 +18,7 @@ export default class Application {
         return this.metadata;
     }
 
-    getPages(): Map<string, ApplicationPage> {
+    getPages(): Map<string, Page> {
         return this.pages;
     }
 

@@ -15,7 +15,7 @@ export default class Component {
         return this.styles;
     }
 
-    getProperties(): Map<string, any> {
+    getPresets(): Map<string, any> {
         return this.properties;
     }
 };
